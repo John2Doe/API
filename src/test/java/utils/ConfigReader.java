@@ -1,14 +1,17 @@
 package utils;
 
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.Properties;
 
 public class ConfigReader {
     public static Properties configFile;
 
-    static {
 
+    static {
         try {
+
             String path = "config.properties";
             FileInputStream input = new FileInputStream(path);
 
@@ -16,13 +19,14 @@ public class ConfigReader {
             configFile.load(input);
 
             input.close();
+
         } catch (Exception e) {
             e.printStackTrace();
-
         }
     }
 
-    public static String getProperty(String keyName) {
+    public static String getProperty(String keyName){
         return configFile.getProperty(keyName);
     }
+
 }
