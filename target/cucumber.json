@@ -1,0 +1,171 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2022-03-05T05:14:32.861Z",
+        "line": 18,
+        "name": "",
+        "description": "",
+        "id": ";;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 2096000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "Create user with \"morpheus\" and \"leader\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"morpheus\"",
+                  "offset": 17
+                },
+                {
+                  "val": "\"leader\"",
+                  "offset": 32
+                }
+              ],
+              "location": "APIStepDef.MyStepdefs.createUserWithAnd(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Validate that status code is 201",
+            "match": {
+              "arguments": [
+                {
+                  "val": "201",
+                  "offset": 29
+                }
+              ],
+              "location": "APIStepDef.MyStepdefs.validateThatStatusCodeIs(int)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 538000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "Make GET call to get user with \"https://reqres.in/api/users\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"https://reqres.in/api/users\"",
+                  "offset": 31
+                }
+              ],
+              "location": "APIStepDef.MyStepdefs.makeGETCallToGetUserWith(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Validate that status code is 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 29
+                }
+              ],
+              "location": "APIStepDef.MyStepdefs.validateThatStatusCodeIs(int)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 429000000,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "Updating the user with the following data",
+            "match": {
+              "location": "APIStepDef.MyStepdefs.updatingTheUserWithTheFollowingData(java.util.Map\u003cjava.lang.String, java.lang.String\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "name",
+                  "Batch 3"
+                ]
+              },
+              {
+                "cells": [
+                  "status",
+                  "active"
+                ]
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 412000000,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "I delete user",
+            "match": {
+              "location": "APIStepDef.MyStepdefs.iDeleteUser()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "Validate that status code is 204",
+            "match": {
+              "arguments": [
+                {
+                  "val": "204",
+                  "offset": 29
+                }
+              ],
+              "location": "APIStepDef.MyStepdefs.validateThatStatusCodeIs(int)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@api"
+          },
+          {
+            "name": "@api"
+          }
+        ]
+      }
+    ],
+    "name": "",
+    "description": "",
+    "id": "",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/api_feature/CRUDOperations.feature",
+    "tags": [
+      {
+        "name": "@api",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  }
+]
